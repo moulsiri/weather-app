@@ -1,0 +1,75 @@
+
+#weathercard{
+    width: 100%;
+    height: 60%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+
+
+#weathercard h1{
+    font-size: 2.3em;
+    color:var(--txt);
+    font-weight: 500;
+}
+#weathercard h6{
+    font-size: 1em;
+    font-weight: 400;
+    color:var(--secTxt)
+}
+#weathercard p{
+    font-size: .8em;
+    display: flex;
+    color:var(--txt);
+    margin-top: 1em;
+    align-items: center;
+}
+#weathercard p i{
+   margin-right: 1em;
+   color:rgb(83, 82, 82);
+}
+#extraData{
+    width: 100%;
+    height: 20%;
+    /* background-color: yellow; */
+    box-shadow: 0 0 10px #0000001f;
+    display: flex;
+}
+.exElm{
+    width: 50%;
+    /* background-color: green; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.exElm div{
+    margin-left: 1em;
+    
+}
+.exElm i{
+    color:rgb(83, 82, 82);
+    font-size: 1.2em;
+}
+.exElm h6{
+    font-size: 1em;
+    color:var(--txt);
+    font-weight: 500;
+
+
+}
+.exElm p{
+    color:var(--secTxt);
+    font-size: .8em;
+}
+.curr-location{
+    font-size: .8em;
+    color:var(--secTxt);
+}
+
+
+

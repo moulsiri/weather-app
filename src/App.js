@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
+import Context from './Context';
 
-function App() {
+import LocationForm from './components/Location';
+import WeatherInfo from './components/WeatherInfo';
+
+import './style.css';
+const App = () => {
+  const [toggle,setToggle]=useState(false);
+  const [weatherData,setWeatherData]=useState(null);
+  const makeObject=(data,location)=>{
+    let tmp={}
+    tmp.icon=data.weather[0].icon;
+    tmp.temprature=data.main.temp-273.15;
+    tmp.description=data.weather[0].description;
+    tmp.feels_like=data.main.feels_like-273.15;
+    tmp.humidity=data.main.humidity;
+    tmp.location=location
+    setWeatherData(tmp)
+}
+  const sideStyle={
+    left:toggle?'100%':"0",
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Context value={{toggle,setToggle,setWeatherData,weatherData,makeObject}}>
+      <div id="app">
+      <div id="weatherApp">
+      <WeatherInfo/>
+      <LocationForm addStyle={sideStyle}/>
+      </div>
+
+
     </div>
-  );
+    </Context>
+    
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,8 @@
+{
+  description: "clear sky",
+feels_like: 30.760000000000048,
+humidity: 16,
+icon: "01d",
+location:"Bhopal,Madhya Pradesh",
+temprature:33.05000000000001
+  }
