@@ -78,7 +78,7 @@ const InputLocation = () => {
             }
         </div> */}
         </div>
-            <button type='submit' className="btn">Get Weather information</button>
+            {/* <button type='submit' className="btn">Get Weather information</button> */}
             {
             loading
             ?<div id="loader"></div>

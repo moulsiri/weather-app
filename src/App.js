@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import Context from './Context';
 
 import LocationForm from './components/Location';
@@ -18,6 +18,16 @@ const App = () => {
     tmp.location=location
     setWeatherData(tmp)
 }
+
+useEffect(()=>{
+  if(!toggle){
+    setWeatherData(null);
+  }
+  console.log(weatherData)
+
+},[toggle])
+
+
   const sideStyle={
     left:toggle?'100%':"0",
   }

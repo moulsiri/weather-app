@@ -11,10 +11,10 @@ const WeatherInfo = () => {
 
     if(weatherData){
         return (
-            <div className="content">
+            <div className="w-content">
                 <h3> 
                     <i className="ri-arrow-left-line" onClick={()=>{setToggle(false)}}></i> 
-                    Weather App</h3>
+                     Weather App</h3>
                 <div id="weathercard">
                     <div id="w-icon">
                     <LazyLoad height={80} >
