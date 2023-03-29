@@ -72,6 +72,7 @@ html,body{
 .content form{
     /* background-color: red; */
     /* height: 50%; */
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -81,14 +82,20 @@ form input{
     background-color: none;
     border:1px solid var(--seperation);
     padding: .5em 1em;
+    text-align: center;
+    width: 100%;
+}
+form input::placeholder{
+    text-align: center;
 }
 form input:focus{
     outline: 1px solid var(--bg);
 }
 #inputField{
     position: relative;
-    background-color: yellow;
+    /* background-color: yellow; */
     margin-bottom: 1em;
+    width: 90%;
 
 }
 #autoComplete{
@@ -173,6 +180,7 @@ form input:focus{
     padding: .5em 1em;
     border-radius: 5px;
     cursor: pointer;
+    width: 90%;
 }
 
 @media (max-width:657px) {
